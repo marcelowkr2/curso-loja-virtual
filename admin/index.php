@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title> mjailton - Criando um site completo </title>
+<title> Criando um site completo </title>
 <link href="estilo-admin.css" type = "text/css" rel="stylesheet" media="all" >
 </head>
 
@@ -12,7 +12,7 @@
 			<div id="formulario-login">
 				<form id ="frmlogin" name="frmlogin" method="post" action="op/op_login.php" >
 					<fieldset>
-						<legend> Faça o login</legend>				
+						<legend> Faï¿½a o login</legend>				
 							<label>
 								<span> Login</span>	
 								<input type = "text" name="txt_login" id="txt_login">

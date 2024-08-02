@@ -1,8 +1,15 @@
 <?php
-	$idCliente = $_SESSION[cliente_curso][ID];	
+
+session_start(); // Inicia a sessÃ£o
+
+	// Verifica se a sessÃ£o estÃ¡ definida e se o Ã­ndice 'cliente_curso' existe
+if (isset($_SESSION['cliente_curso']) && isset($_SESSION['cliente_curso']['ID'])) {
+    $idCliente = $_SESSION['cliente_curso']['ID'];	
 	
-		$cliente->setId($idCliente);
-		$cliente->mostrarDados();
+	 // Supondo que a classe Cliente jÃ¡ esteja incluÃ­da e $cliente seja uma instÃ¢ncia de Cliente
+	 $cliente = new Cliente(); // Instancia a classe Cliente
+	 $cliente->setId($idCliente);
+	 $cliente->mostrarDados();
 		
 		
 		
@@ -37,7 +44,7 @@
 			<div id="lista_venda">
 				<strong> Num compra:</strong> <span> <?php echo $venda->getId(); ?> </span>
 				<strong> Data da venda: </strong> <span> <?php echo databr($venda->getDataVenda(),0); ?> </span>
-				<strong> Código do Rastreamento:</strong> <span> <?php echo $venda->getCodigoRastreamento(); ?> </span>
+				<strong> Cï¿½digo do Rastreamento:</strong> <span> <?php echo $venda->getCodigoRastreamento(); ?> </span>
 				<strong> Status: </strong> <span> <?php echo $venda->getStatusVenda(); ?> </span>
 				<strong> Total: </strong> <span> <?php echo "R$ " .number_format($itens->somaVendas($idVenda),2,',','.'); ?> </span>		
 			
@@ -49,9 +56,9 @@
 					<table cellpadding="0" cellspacing="0" border="1">
 						<thead>
 							<tr>
-								<th>Descrição do produto </th>
+								<th>Descriï¿½ï¿½o do produto </th>
 								<th>Quantidade </th>
-								<th>Preço unitário </th>
+								<th>Preï¿½o unitï¿½rio </th>
 								<th>Subtotal </th>
 								
 							</tr>
@@ -137,7 +144,7 @@
 								<input type="text" name="txt_cliente" id="txt_cliente" value="<?php echo $txt_cliente ?>">
 							</label>							
 							<label>
-								<span>Endereço</span>
+								<span>Endereï¿½o</span>
 								<input type="text" name="txt_endereco" id="txt_endereco" value="<?php echo $txt_endereco ?>">
 							</label>
 							<label>
@@ -182,4 +189,8 @@
 		
 		 echo "<script type='text/javascript'> location.href='pg/logarParaComprar/minha_conta' </script>";
 	}
+}else{
 	
+	echo "<script type='text/javascript'> location.href='pg/logarParaComprar/minha_conta' </script>";
+}
+?>

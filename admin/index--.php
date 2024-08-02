@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset=utf-8">
-<title> mjailton- Curso de loja virtual </title>
+<title> Curso de loja virtual </title>
 <link href="css/css.css" rel="stylesheet" />
 <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
 <script type="text/javascript" src="js/abas.js"></script>

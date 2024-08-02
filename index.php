@@ -1,5 +1,5 @@
 <?php
-	define('pg','http://localhost/nova-loja');
+	define('pg','http://localhost/loja-virtual');
 	
 	include_once("admin/classes/DadosDoBanco.php");	
 	include "biblio.php";
@@ -16,10 +16,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset=utf-8">
-<title> mjailton- Curso de loja virtual </title>
-<link href="<?php echo pg ?>/css/reset.css" rel="stylesheet" />
-<link href="<?php echo pg ?>/css/css.css" rel="stylesheet" />
+<meta charset="utf-8">
+<title> Curso de loja virtual </title>
+<link rel="stylesheet" href="css/reset.css"/>
+<link rel="stylesheet" href="css/css.css"/>
 <script type="text/javascript" src="<?php echo pg ?>/js/jquery-1.6.4.min.js"></script>
 <script type="text/javascript" src="<?php echo pg ?>/js/abas.js"></script>
 
